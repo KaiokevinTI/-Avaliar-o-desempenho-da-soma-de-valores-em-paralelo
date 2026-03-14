@@ -1,0 +1,46 @@
+ SOMA SERIAL DE NÚMEROS EM ARQUIVO
+==================================================
+Arquivo: C:\Users\kkaio\OneDrive\Desktop\numeros\numero1.txt
+Processando...
+
+Soma total:             -88
+Tempo de processamento: 0.105798 segundos
+==================================================
+  SOMA PARALELA — 2 THREADS
+==================================================
+Arquivo:    C:\Users\kkaio\OneDrive\Desktop\numeros\numero1.txt
+CPUs disp.: 12
+Processando...
+
+Soma total:             -88
+Tempo de processamento: 0.416220 segundos
+
+==================================================
+  SOMA PARALELA — 4 THREADS
+==================================================
+Arquivo:    C:\Users\kkaio\OneDrive\Desktop\numeros\numero1.txt
+CPUs disp.: 12
+Processando...
+
+Soma total:             -88
+Tempo de processamento: 0.470866 segundos
+
+==================================================
+  SOMA PARALELA — 8 THREADS
+==================================================
+Arquivo:    C:\Users\kkaio\OneDrive\Desktop\numeros\numero1.txt
+CPUs disp.: 12
+Processando...
+
+Soma total:             -88
+Tempo de processamento: 0.545442 segundos
+
+==================================================
+  SOMA PARALELA — 12 THREADS
+==================================================
+Arquivo:    C:\Users\kkaio\OneDrive\Desktop\numeros\numero1.txt
+CPUs disp.: 12
+Processando...
+
+Soma total:             -88
+Tempo de processamento: 0.614917 segundos
