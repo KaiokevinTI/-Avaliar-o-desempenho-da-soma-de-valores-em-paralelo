@@ -1,0 +1,1 @@
+# -Avaliar-o-desempenho-da-soma-de-valores-em-paralelo
