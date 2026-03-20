@@ -70,7 +70,7 @@ Reduzir o tempo total de execução utilizando paralelismo baseado em múltiplos
 ``python
 time.time()
 
-##⚙️ Configurações Testadas
+## ⚙️ Configurações Testadas
 
 2 processos
 
@@ -80,7 +80,7 @@ time.time()
 
 12 processos
 
-##📌 Condições de Execução
+## 📌 Condições de Execução
 
 Processamento paralelo por arquivo
 
@@ -92,7 +92,7 @@ Máquina com uso normal do sistema
 
 ---
 
-###📈 4. Resultados Experimentais
+### 📈 4. Resultados Experimentais
 
 | Processos | Tempo (s) | Speedup | Eficiência |
 | --------- | --------- | ------- | ---------- |
@@ -104,7 +104,7 @@ Máquina com uso normal do sistema
 
 ---
 
-###🧮 5. Cálculo
+### 🧮 5. Cálculo
 
 🔹 Speedup
 Speedup(p) = T(1) / T(p)
@@ -113,7 +113,8 @@ Eficiência(p) = Speedup(p) / p
 
 
 ---
-🔍 6. Análise dos Resultados
+
+### 🔍 6. Análise dos Resultados
 
 O aumento de processos reduziu o tempo total de execução
 
@@ -128,12 +129,14 @@ Overhead de criação de processos
 Gargalo de leitura de disco (I/O)
 
 Paralelismo não escala linearmente
+
 ---
-🧾 7. Conclusão
+
+### 🧾 7. Conclusão
 
 A paralelização apresentou ganhos limitados, devido principalmente ao custo de I/O e overhead.
 
-✔️ Principais Pontos
+## ✔️ Principais Pontos
 
 Melhor configuração: 12 processos
 
