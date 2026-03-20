@@ -36,11 +36,11 @@ O objetivo deste trabalho foi analisar arquivos de log, contabilizando:
 
 **Volume total processado:**
 
-| Métrica        | Valor |
-|---------------|------|
-| Linhas        | 10.000.000 |
-| Palavras      | 200.000.000 |
-| Caracteres    | 1.366.663.305 |
+| Métrica     | Valor            |
+|------------|------------------|
+| Linhas     | 10.000.000       |
+| Palavras   | 200.000.000      |
+| Caracteres | 1.366.663.305    |
 
 ---
 
@@ -52,23 +52,25 @@ Reduzir o tempo total de execução utilizando paralelismo baseado em múltiplos
 
 ## 💻 2. Ambiente Experimental
 
-| Item              | Descrição                |
-|------------------|------------------------|
-| Processador      | Intel Core i5-12450    |
-| Núcleos          | 12 threads lógicas     |
-| Memória RAM      | 16 GB                  |
-| Sistema Operacional | Windows 11          |
-| Linguagem        | Python 3.13            |
-| Biblioteca       | multiprocessing        |
+| Item                 | Descrição             |
+|----------------------|----------------------|
+| Processador          | Intel Core i5-12450  |
+| Núcleos              | 12 threads lógicas   |
+| Memória RAM          | 16 GB                |
+| Sistema Operacional  | Windows 11           |
+| Linguagem            | Python 3.13          |
+| Biblioteca           | multiprocessing      |
 
 ---
+
 ## 🧪 3. Metodologia
 
-### ⏱️ Medição de tempo
-python
-time.time() 
+### ⏱️ Medição de Tempo
 
-⚙️ Configurações testadas
+``python
+time.time()
+
+⚙️ Configurações Testadas
 
 2 processos
 
@@ -78,7 +80,7 @@ time.time()
 
 12 processos
 
-📌 Condições
+📌 Condições de Execução
 
 Processamento paralelo por arquivo
 
@@ -86,45 +88,46 @@ Uso de multiprocessing.Pool
 
 Execução local
 
+Máquina com uso normal do sistema
+---
 📈 4. Resultados Experimentais
-📊 Dataset: 1000 arquivos
-
-| Processos | Tempo (s) | Speedup | Eficiência |
-| --------- | --------- | ------- | ---------- |
-| 2         | 51.0305   | 0.3404  | 0.1702     |
-| 4         | 28.4915   | 0.6094  | 0.1523     |
-| 8         | 18.9419   | 0.9166  | 0.1146     |
-| 12        | 16.8709   | 1.0294  | 0.0858     |
-
-🧮 5. Fórmulas
-Speedup
+📊 Dataset: 1000 arquivos de log
+Processos	Tempo (s)	Speedup	Eficiência
+2	51.0305	0.3404	0.1702
+4	28.4915	0.6094	0.1523
+8	18.9419	0.9166	0.1146
+12	16.8709	1.0294	0.0858
+---
+🧮 5. Cálculo
+🔹 Speedup
 Speedup(p) = T(1) / T(p)
-Eficiência
+🔹 Eficiência
 Eficiência(p) = Speedup(p) / p
+---
 🔍 6. Análise dos Resultados
 
-Houve redução no tempo com aumento de processos
+O aumento de processos reduziu o tempo total de execução
 
-Melhor desempenho com 12 processos
+Melhor desempenho observado com 12 processos
 
 Speedup máximo ≈ 1.03
 
-⚠️ Limitações observadas
+⚠️ Limitações Observadas
 
 Overhead de criação de processos
 
 Gargalo de leitura de disco (I/O)
 
-Ganho não linear
-
+Paralelismo não escala linearmente
+---
 🧾 7. Conclusão
 
 A paralelização apresentou ganhos limitados, devido principalmente ao custo de I/O e overhead.
 
-✔️ Pontos principais
+✔️ Principais Pontos
 
 Melhor configuração: 12 processos
 
-Eficiência diminui com mais processos
+Eficiência diminui conforme aumenta o número de processos
 
-Paralelismo não escala linearmente
+O ganho de desempenho não é proporcional ao número de processos
