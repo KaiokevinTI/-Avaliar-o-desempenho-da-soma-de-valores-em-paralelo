@@ -70,7 +70,7 @@ Reduzir o tempo total de execução utilizando paralelismo baseado em múltiplos
 ``python
 time.time()
 
-⚙️ Configurações Testadas
+##⚙️ Configurações Testadas
 
 2 processos
 
@@ -80,7 +80,7 @@ time.time()
 
 12 processos
 
-📌 Condições de Execução
+##📌 Condições de Execução
 
 Processamento paralelo por arquivo
 
@@ -89,20 +89,29 @@ Uso de multiprocessing.Pool
 Execução local
 
 Máquina com uso normal do sistema
+
 ---
-📈 4. Resultados Experimentais
-📊 Dataset: 1000 arquivos de log
-Processos	Tempo (s)	Speedup	Eficiência
-2	51.0305	0.3404	0.1702
-4	28.4915	0.6094	0.1523
-8	18.9419	0.9166	0.1146
-12	16.8709	1.0294	0.0858
+
+###📈 4. Resultados Experimentais
+
+| Processos | Tempo (s) | Speedup | Eficiência |
+| --------- | --------- | ------- | ---------- |
+| 2         | 51.0305   | 0.3404  | 0.1702     |
+| 4         | 28.4915   | 0.6094  | 0.1523     |
+| 8         | 18.9419   | 0.9166  | 0.1146     |
+| 12        | 16.8709   | 1.0294  | 0.0858     |
+
+
 ---
-🧮 5. Cálculo
+
+###🧮 5. Cálculo
+
 🔹 Speedup
 Speedup(p) = T(1) / T(p)
 🔹 Eficiência
 Eficiência(p) = Speedup(p) / p
+
+
 ---
 🔍 6. Análise dos Resultados
 
